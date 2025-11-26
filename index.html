@@ -2,6 +2,8 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: sans-serif;
@@ -13,32 +15,48 @@
     h1 {
       margin-bottom: 30px;
     }
+
+    /* Default: desktop/tablet layout */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
       padding: 0 20px;
     }
+
     .gallery img {
       width: 100%;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
+    /* Mobile layout: make images one column & bigger */
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;   /* 單欄 */
+        gap: 30px;                    /* 增加上下間距 */
+      }
+      .gallery img {
+        width: 100%;                  /* 填滿螢幕寬 */
+        max-width: 100%;              /* 避免縮小 */
+      }
+    }
   </style>
 </head>
 <body>
+
   <div class="gallery">
-    <img src="IMG_5640.jpeg" alt="">
-    <img src="IMG_5641.jpeg" alt="">
-    <img src="IMG_5642.jpeg" alt="">
-    <img src="IMG_5643.jpeg" alt="">
-    <img src="IMG_5644.jpeg" alt="">
-    <img src="IMG_5645.jpeg" alt="">
-    <img src="IMG_5646.jpeg" alt="">
-    <img src="IMG_5647.jpeg" alt="">
-    <img src="IMG_5648.jpeg" alt="">
-    <img src="IMG_5649.jpeg" alt="">
+    <img src="photo1.jpg" alt="">
+    <img src="photo2.jpg" alt="">
+    <img src="photo3.jpg" alt="">
+    <img src="photo4.jpg" alt="">
+    <img src="photo5.jpg" alt="">
+    <img src="photo6.jpg" alt="">
+    <img src="photo7.jpg" alt="">
+    <img src="photo8.jpg" alt="">
+    <img src="photo9.jpg" alt="">
+    <img src="photo10.jpg" alt="">
   </div>
 
 </body>
